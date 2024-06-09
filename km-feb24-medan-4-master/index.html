@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Sales Dashboard</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar() ">
+          <img src="icon/menu.png" alt="" />
+        </div>
+        <div class="header-center"></div>
+        <div class="header-right">
+          <img src="img\Revou.png" />
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="close-icon" onclick="closeSidebar()">
+            <img src="icon/back.png" alt="" /> Back
+          </div>
+          <div class="sidebar-brand">VENDING MACHINE SALES</div>
+        </div>
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="index.html">
+              <img src="icon/home.png" alt="" /> Homepage
+            </a>
+          </li>
+          <li class="sidebar-list-item dropdown">
+            <a href="#"> <img src="icon/analytics.png" alt="" /> Analytics </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="preview1.html">
+                    <img src="icon/barchart.png" alt="" /> Insights 1
+                    <span class="small-text">Preview & Rawdata</span>
+                </a>
+                <a class="dropdown-item" href="preview2.html">
+                    <img src="icon/timeline.png" alt="" /> Insights 2
+                    <span class="small-text">Monhtly Sales</span>
+                </a>
+                <a class="dropdown-item" href="preview3.html">
+                    <img src="icon/piechart.png" alt="" /> Insights 3
+                    <span class="small-text">Sales Percentage</span>
+                </a>
+            </div>
+        </li>        
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <section class="introbussiness">
+          <div class="bussinessback">
+            <h1>Bussiness Background</h1>
+            <p>
+              Perusahaan ABC memiliki bisnis vanding machine yang berlokasi di
+              New Jersey. Gutten Plans, EB Public Library, BSQ Mall, dan earle
+              Ashphalt. Berdasarkan data dari januari 2022 sampai dengan Juli
+              2022 mengalami peningkatan rata-rata transaksi total sebesar 18%.
+              Namun,pada Juli sampai Agustus 2022 terjadi penurunan transaksi
+              total sebesar 7,4%.
+            </p>
+          </div>
+          <div class="hypo">
+            <h1>Hypothesis</h1>
+            <p>
+              Jika kita meningkatkan jumlah vending mechine di lokasi EB Public
+              Library dan GuttenPlans maka penjualan di vending mechine akan
+              meningkatt, jika kita meningkatkan jumlah produk makanan di
+              vending machine pada setiap daerah, maka penjualan akan meningkat.
+              Metrics : Penjualan, jumlah vending machine, dan jumlah produk
+              makanan.
+            </p>
+          </div>
+          <div class="insight">
+            <h1>Insight</h1>
+            Dua lokasi yang memiliki penjualan tertinggi adalah GuttenPlans dan
+            EB Public Library. Kategori dengan penjualan tertinggi di semua
+            lokasi adalah makanan, tergantung lokasi dan produk yang diminati Di
+            setiap lokasi tidak hanya 1 vending machine, tetapi ada lokasi yang
+            memiliki 2 vending machine yaitu Brunswick Sq Mall. Penjualan per
+            bulan lebih stabil di lokasi EB Public Library Penjualan food,
+            carbonate, non carbonate dan water terkadang naik turun.
+          </div>
+        </section>
+
+        <article class="group-members">
+          <h2>TEAM 4 MEDAN</h2>
+          <div class="member-grid">
+            <div class="member-card">
+              <img src="img/Iqbal_Revo-U.png" />
+              <h3>Muhammad Iqbal</h3>
+              <p>Project Leader</p>
+            </div>
+            <div class="member-card">
+              <img src="img/Halven_Revo-u.png" />
+              <h3>Afriando Halven Manihuruk</h3>
+              <p>Front End Engineer</p>
+            </div>
+            <div class="member-card">
+              <img src="img/Yordanil_Revo-U.png" />
+              <h3>Muhammad Yordanil Omar Hamdi</h3>
+              <p>Front End Engineer</p>
+            </div>
+            <div class="member-card">
+              <img src="img/Muslim_Revo-U.png" />
+              <h3>Muslim Musthofa Febri</h3>
+              <p>Front End Engineer</p>
+            </div>
+            <div class="member-card">
+              <img src="img/Nurul_Revo-U.png" />
+              <h3>Nurul Ismah Muharomah</h3>
+              <p>Front End Engineer</p>
+            </div>
+            <div class="member-card">
+              <img src="img/Windi_Revo-U.png" />
+              <h3>Windi Yuniawati</h3>
+              <p>Deployment Team</p>
+            </div>
+            <div class="member-card">
+              <img src="img/Yunita_Revo-U.png" />
+              <h3>Yunita Rumondang br Nainggolan</h3>
+              <p>Deployment Team</p>
+            </div>
+            <div class="member-card">
+              <img src="img/Hoki_Revo-U.png" />
+              <h3>Hokianto Suseno</h3>
+              <p>Pitch Deck Team</p>
+            </div>
+            <div class="member-card">
+              <img src="img/Martsa_Revo-U.png" />
+              <h3>Martsa Rahmah Utami</h3>
+              <p>Pitch Deck Team</p>
+            </div>
+            <div class="member-card">
+              <img src="img/Selvya_Revo-U.png" />
+              <h3>Selvya Mulyaningtyas</h3>
+              <p>Pitch Deck Team</p>
+            </div>
+            <div class="member-card">
+              <img src="img/Alisa_Revo-U.png" />
+              <h3>Alisa Nurhimah Hayati</h3>
+              <p>Quality Assurance</p>
+            </div>
+            <div class="member-card">
+              <img src="img/Fajar_Revo-U.png" />
+              <h3>Fajar Saputra</h3>
+              <p>Quality Assurance</p>
+            </div>
+            <div class="member-card">
+              <img src="img/Reiza_Revo-U.png" />
+              <h3>Reiza Dwi Karunia</h3>
+              <p>Quality Assurance</p>
+            </div>
+            <!-- Tambahkan kartu member lainnya di sini -->
+          </div>
+        </article>
+      </main>
+      <!-- End Main -->
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-title">
+          TEAM 4 Medan Copyright © 2024 - All rights reserved
+        </div>
+      </footer>
+      <!-- End Footer -->
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

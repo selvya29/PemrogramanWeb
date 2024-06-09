@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Sales Dashboard</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <img src="icon/menu.png" alt="" />
+        </div>
+        <div class="header-center"></div>
+        <div class="header-right">
+          <img src="img/Revou.png" />
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="close-icon" onclick="closeSidebar()">
+            <img src="icon/back.png" alt="" /> Close
+          </div>
+          <div class="sidebar-brand">VENDING MACHINE SALES</div>
+        </div>
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="index.html">
+              <img src="icon/home.png" alt="" /> Homepage
+            </a>
+          </li>
+          <li class="sidebar-list-item dropdown">
+            <a href="#"> <img src="icon/analytics.png" alt="" /> Analytics </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="preview1.html">
+                    <img src="icon/barchart.png" alt="" /> Insights 1
+                    <span class="small-text">Preview & Rawdata</span>
+                </a>
+                <a class="dropdown-item" href="preview2.html">
+                    <img src="icon/timeline.png" alt="" /> Insights 2
+                    <span class="small-text">Monhtly Sales</span>
+                </a>
+                <a class="dropdown-item" href="preview3.html">
+                    <img src="icon/piechart.png" alt="" /> Insights 3
+                    <span class="small-text">Sales Percentage</span>
+                </a>
+            </div>
+        </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="charts">
+          <div class="charts-card">
+            <div class="month-range">
+              <label for="startMonth">Start Month:</label>
+              <select id="startMonth">
+                <option value="Jan">Jan</option>
+                <option value="Feb">Feb</option>
+                <option value="Mar">Mar</option>
+                <option value="Apr">Apr</option>
+                <option value="May">May</option>
+                <option value="Jun">Jun</option>
+                <option value="Jul">Jul</option>
+                <option value="Aug">Aug</option>
+                <option value="Sep">Sep</option>
+                <option value="Oct">Oct</option>
+                <option value="Nov">Nov</option>
+                <option value="Dec">Dec</option>
+              </select>
+
+              <label for="endMonth">End Month:</label>
+              <select id="endMonth">
+                <option value="Jan">Jan</option>
+                <option value="Feb">Feb</option>
+                <option value="Mar">Mar</option>
+                <option value="Apr">Apr</option>
+                <option value="May">May</option>
+                <option value="Jun">Jun</option>
+                <option value="Jul">Jul</option>
+                <option value="Aug">Aug</option>
+                <option value="Sep">Sep</option>
+                <option value="Oct">Oct</option>
+                <option value="Nov">Nov</option>
+                <option value="Dec">Dec</option>
+              </select>
+              <button onclick="updateCharts()">Update</button>
+            </div>
+            <h2 class="chart-title">
+              Vending Machine Sales by Category Every Month
+            </h2>
+            <canvas id="categoryLineChart" width="400" height="200"></canvas>
+          </div>
+          <div class="charts-card">
+            <h2 class="chart-title">
+              Vending Machine Sales by Region Every Month
+            </h2>
+            <canvas id="regionLineChart" width="400" height="200"></canvas>
+          </div>
+        </div>
+      </main>
+      <!-- End Main -->
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-title">
+          TEAM 4 Medan Copyright © 2024 - All rights reserved
+        </div>
+      </footer>
+      <!-- End Footer -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script_linechart.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

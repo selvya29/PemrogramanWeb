@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Sales Dashboard</title>
+
+    <!-- DataTables CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="lib/datatables/dataTables.css"
+    />
+    <!-- jQuery -->
+    <script src="lib/jquery/jquery-3.7.1.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="lib/datatables/dataTables.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <img src="icon/menu.png" alt="" />
+        </div>
+        <div class="header-center"></div>
+        <div class="header-right">
+          <img src="img\Revou.png" />
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="close-icon" onclick="closeSidebar()">
+            <img src="icon/back.png" alt="" /> Close
+          </div>
+          <div class="sidebar-brand">VENDING MACHINE SALES</div>
+        </div>
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="index.html">
+              <img src="icon/home.png" alt="" /> Homepage
+            </a>
+          </li>
+          <li class="sidebar-list-item dropdown">
+            <a href="#"> <img src="icon/analytics.png" alt="" /> Analytics </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="preview1.html">
+                    <img src="icon/barchart.png" alt="" /> Insights 1
+                    <span class="small-text">Preview & Rawdata</span>
+                </a>
+                <a class="dropdown-item" href="preview2.html">
+                    <img src="icon/timeline.png" alt="" /> Insights 2
+                    <span class="small-text">Monhtly Sales</span>
+                </a>
+                <a class="dropdown-item" href="preview3.html">
+                    <img src="icon/piechart.png" alt="" /> Insights 3
+                    <span class="small-text">Sales Percentage</span>
+                </a>
+            </div>
+        </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <h2>Vending Machine Sales</h2>
+        </div>
+
+        <div class="main-cards">
+          <div class="card">
+            <div class="card-inner">
+              <h3>TOTAL SALES</h3>
+              <img src="icon/sell.png" alt="" />
+            </div>
+            <h1 id="totalSales"></h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>TOTAL TRANSACTIONS</h3>
+              <img src="icon/receiptlong.png" alt="" />
+            </div>
+            <h1 id="totalTransactions"></h1>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <h3>TOTAL PRODUCT</h3>
+              <img src="icon/inventory.png" alt="" />
+            </div>
+            <h1 id="totalProduct"></h1>
+          </div>
+        </div>
+
+        <div class="charts">
+          <div class="charts-card">
+            <h2 class="chart-title">TOP 10 Products by Total Sales</h2>
+            <div class="sort-buttons">
+              <button id="sortDownButton" class="sort-button">
+                <img src="icon/up.png" alt="Up" /> Highest Sales
+              </button>
+              <button id="sortUpButton" class="sort-button">
+                <img src="icon/down.png" alt="Down" /> Lowest Sales
+              </button>
+            </div>
+            <canvas id="barChart" width="400" height="400"></canvas>
+          </div>
+
+          <div class="charts-card">
+            <h2 class="chart-title">Product Sales Data</h2>
+            <table id="example" class="display cell-border" style="width: 100%">
+              <thead>
+                <tr>
+                  <th>Location</th>
+                  <th>Machine</th>
+                  <th>Product</th>
+                  <th>Category</th>
+                  <th>TransactionDate</th>
+                  <th>Line Total</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+      </main>
+      <!-- End Main -->
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-title">
+          TEAM 4 Medan Copyright © 2024 - All rights reserved
+        </div>
+      </footer>
+      <!-- End Footer -->
+    </div>
+
+    <!-- CDN ChartJs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Script Js -->
+    <script src="js/script_barchart.js"></script>
+    <script src="js/script_maincard.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

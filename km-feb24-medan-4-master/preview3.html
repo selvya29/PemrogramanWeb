@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Sales Dashboard</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <img src="icon/menu.png" alt="" />
+        </div>
+        <div class="header-center"></div>
+        <div class="header-right">
+          <img src="img\Revou.png" />
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="close-icon" onclick="closeSidebar()">
+            <img src="icon/back.png" alt="" /> Close
+          </div>
+          <div class="sidebar-brand">VENDING MACHINE SALES</div>
+        </div>
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="index.html">
+              <img src="icon/home.png" alt="" /> Homepage
+            </a>
+          </li>
+          <li class="sidebar-list-item dropdown">
+            <a href="#"> <img src="icon/analytics.png" alt="" /> Analytics </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="preview1.html">
+                    <img src="icon/barchart.png" alt="" /> Insights 1
+                    <span class="small-text">Preview & Rawdata</span>
+                </a>
+                <a class="dropdown-item" href="preview2.html">
+                    <img src="icon/timeline.png" alt="" /> Insights 2
+                    <span class="small-text">Monhtly Sales</span>
+                </a>
+                <a class="dropdown-item" href="preview3.html">
+                    <img src="icon/piechart.png" alt="" /> Insights 3
+                    <span class="small-text">Sales Percentage</span>
+                </a>
+            </div>
+        </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="charts-pie">
+          <div class="charts-cardpie">
+            <h2 class="chart-title">Percentage of Sales by Category</h2>
+            <canvas id="categoryPieChart" width="400" height="200"></canvas>
+            <div id="categoryTableContainer">
+              <table class="chart-tablepie" id="categoryTable">
+                <thead>
+                  <tr>
+                    <th>Category</th>
+                    <th>Sales</th>
+                    <th>Percentage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Data dari JSON akan dimuat di sini -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="charts-cardpie">
+            <h2 class="chart-title">Percentage of Sales by Region</h2>
+            <canvas id="regionPieChart" width="400" height="200"></canvas>
+            <div id="regionTableContainer">
+              <table class="chart-tablepie" id="regionTable">
+                <thead>
+                  <tr>
+                    <th>Region</th>
+                    <th>Sales</th>
+                    <th>Percentage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Data dari JSON akan dimuat di sini -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="charts-cardpie">
+            <h2 class="chart-title">Percentage of Sales by Machine</h2>
+            <canvas id="machinePieChart" width="400" height="200"></canvas>
+            <div id="machineTableContainer">
+              <table class="chart-tablepie" id="machineTable">
+                <thead>
+                  <tr>
+                    <th>Machine</th>
+                    <th>Sales</th>
+                    <th>Percentage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Data dari JSON akan dimuat di sini -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- End Main -->
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-title">
+          TEAM 4 Medan Copyright © 2024 - All rights reserved
+        </div>
+      </footer>
+      <!-- End Footer -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="js/script_piechart.js" defer></script>
+    <script src="js/script.js"></script>
+    <script src="js/script_tablepie.js"></script>
+  </body>
+</html>
